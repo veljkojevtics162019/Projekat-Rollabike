@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=" width=device-width" , initial-scale=1.0">
+  <title>Roll a bike - bicikli i oprema po najboljim cenama!</title>
+  <link rel="stylesheet" href="Register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.css">
+  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      }
+      else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <style>
+    .ime {
+      width: 100%;
+      border: 1px solid black;
+      height: 50px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .button {
+      width: 150px;
+      height: 50px;
+      margin-top: 14px;
+      font-size: 22px;
+      border-radius: 2px;
+    }
+
+
+    .button:hover {
+      background-color: rgb(139, 77, 255);
+      transition: 700ms;
+    }
+
+    .new1 {
+      border-top: 1px solid rgb(90, 90, 90);
+    }
+
+    .container {
+      padding: 50px;
+    }
+
+    input[type=text],
+    input[type=password],
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: orange;
+      outline: none;
+    }
+
+
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+
+
+    .hr1 {
+      margin-top: 20px;
+      border-top: 4px double #afafaf;
+    }
+
+    .hr2 {
+      width: 100%;
+      border-top: 4px double #afafaf;
+    }
+  </style>
+</head>
+
+
+<body style="background-color: rgb(221, 221, 221);">
+  <div class="container">
+    <div class="row">
+      <div class="col-2"><a href="../PocetnaStrana/PocetnaStrana.php"><img src="pngwing.com.png" class="logo"></a>
+      </div>
+      <div class="col-5"><a href="../PocetnaStrana/PocetnaStrana.php"><img src="Untitled.png" class="centralimg"></a>
+      </div>
+      <div class="col-5"><a href="Register.html"><img src="register.png" class="register"></a></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hr1"></div>
+      </div>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+      <a href="../PocetnaStrana/PocetnaStrana.php">Ponuda bicikala</a>
+      <a href="../Oprema/Oprema.php">Ponuda opreme i delova</a>
+      <a href="../Onama/Onama.html">O nama</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hr2"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h3 style="text-align: center;">Popunite formu za registraciju</h3>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <form action="../php/register.php" method="POST">
+              <div class="container">
+                <hr hr class="new1">
+                <label> Ime: </label>
+                <input type="text" id="ime" name="ime" placeholder="Ime" size="15" required />
+                <hr hr class="new1">
+
+                <label> Prezime: </label>
+                <input type="text" id="prezime" name="prezime" placeholder="Prezime" size="15" required />
+                <hr hr class="new1">
+
+                <div>
+                  <label>
+                    Pol:
+                  </label><br>
+                  <input type="radio" value="Muski" id="pol" name="pol" checked> Muski
+                  <input type="radio" value="Zenski" id="pol" name="pol"> Zenski
+                  <hr hr class="new1">
+                </div>
+                <label>
+                  Broj telefona:
+                </label>
+                <input type="text" id="brojtelefona" name="brojtelefona" placeholder="Unesite broj telefona" size="12" /
+                  required>
+                <hr class="new1">
+
+                <label>
+                  Adresa:
+                </label>
+                <textarea cols="80" rows="5" name="adresa" id="adresa"
+                  placeholder="Upisite ulicu i broj, naziv mesta i postanski broj" value="address" required></textarea>
+
+
+                <hr class="new1">
+                <label for="email">Email:</label>
+                <input type="text" placeholder="Unesite Email" id="email" name="email" required>
+
+                <hr class="new1">
+                <label for="psw">Lozinka:</label>
+                <input type="password" placeholder="Unesite lozinku" id="lozinka" name="lozinka" required>
+                <hr class="new1">
+                <button type="submit" class="registerbtn" name="registerbtn">Registruj se</button>
+                <p>Vec imate nalog?<a href="../Login/Login.html"> Ulogujte se</a></p>
+                <hr class="new1">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  </div>
+  <div class="row">
+    <div style="padding: 0;" class="col-md-12">
+      <div class="footer">
+        <a href="../PocetnaStrana/PocetnaStrana.php"><img src="pngwing.com.png" class="logo"></a>
+        <p>__RollABike__</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
